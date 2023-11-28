@@ -34,7 +34,7 @@ const SocialLinks = () => {
       ),
     },
     {
-      id: 1,
+      id: 4,
       href: "/resume.pdf",
       child: (
         <>
