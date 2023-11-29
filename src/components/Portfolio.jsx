@@ -52,9 +52,9 @@ const Portfolio = () => {
               <img
                 src={src}
                 alt="arrayDestruct"
-                className="rounded-t-md hover:rounded-md duration-200 hover:scale-105"
+                className="rounded-t-md hover:rounded-md duration-200 hover:scale-105 min-h-[171px]"
               />
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center text-center">
                 <a
                   href={demolink}
                   target="_blank"
