@@ -19,7 +19,7 @@ const Home = () => {
             web. Expert en technologies telles que React, Tailwind, Express et
             MySQL, je m'engage à offrir des solutions innovantes et efficaces.
           </p>
-          <div>
+          <div className="flex justify-center mb-2 md:justify-start">
             <Link
               to="portfolio"
               smooth
@@ -34,7 +34,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        <div className="md:px-2">
           <img
             src={HeroImage}
             alt="my profile"

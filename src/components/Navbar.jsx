@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -7,23 +8,28 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      link: "Home",
+      link: "home",
+      linkname: "Home",
     },
     {
       id: 2,
-      link: "About",
+      link: "about",
+      linkname: "About",
     },
     {
       id: 3,
-      link: "Portfolio",
+      link: "portfolio",
+      linkname: "Portfolio",
     },
     {
       id: 4,
-      link: "Experience",
+      link: "experience",
+      linkname: "Experience",
     },
     {
       id: 5,
-      link: "Contact",
+      link: "contact",
+      linkname: "Contact",
     },
   ];
 
@@ -33,13 +39,15 @@ const Navbar = () => {
         <h1 className="text-5xl font-signature ml-2">Oussama</h1>
       </div>
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => {
+        {links.map(({ id, link, linkname }) => {
           return (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200"
             >
-              {link}
+              <Link smooth duration={500} to={link}>
+                {linkname}
+              </Link>
             </li>
           );
         })}
@@ -54,13 +62,15 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => {
+          {links.map(({ id, link, linkname }) => {
             return (
               <li
                 key={id}
                 className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-white duration-200"
               >
-                {link}
+                <Link smooth duration={500} to={link}>
+                  {linkname}
+                </Link>
               </li>
             );
           })}
